@@ -12,21 +12,21 @@
 <body>
     <header style="display: flex; flex-direction: row; gap: 50px;">
         <div style="justify-self: start;">
-            <img class="logo HoverExpasion" src="logo (1).png" alt="logo">
+            <img class="logo " src="logo (1).png" alt="logo">
         </div>
         <div class="nav_bar">
-            <a class="nav_button HoverExpasion" href="">Portfolio</a>
-            <a class="nav_button HoverExpasion" href="">About Me</a>
-            <a class="nav_button HoverExpasion" href="">Contact Me</a>
+            <a class="nav_button " href="">Portfolio</a>
+            <a class="nav_button " href="">About Me</a>
+            <a class="nav_button " href="">Contact Me</a>
         </div>
     </header>
 
-    <main>
+    <main style="display: flex; gap: 50px; flex-direction: column;">
         <section class="ShowOff">
-            <div class="Themes" style="display: flex; flex-direction: row; gap: 60px;">
-                <button class="Theme_button" id="cyberPunk">CyberPunk</button>
-                <button class="Theme_button" id="solarPunk">SolarPunk</button>
-                <button class="Theme_button" id="steamPunk">SteamPunk</button>
+            <div class="Themes">
+                <button class="Theme_button cyberPunk_button" id="cyberPunk">CyberPunk</button>
+                <button class="Theme_button SolarPunk_button" id="solarPunk">SolarPunk</button>
+                <button class="Theme_button SteamPunk_button" id="steamPunk">SteamPunk</button>
             </div>
             <div class="highlight" style="display: flex; flex-direction: row;">
                 <i class="fa fa-chevron-left highlight_arrow"></i>
@@ -104,6 +104,8 @@
 
         <section class="AboutMe">
             <div class="Picture">
+                <div class="grid_square" style="background-color: rgb(163, 96, 105); height: 200px; width: 250px;">
+                </div>
             </div>
             <div class="Text">
 
@@ -112,6 +114,8 @@
 
         <section class="ContactMe">
 
+            <div class="grid_square" style="background-color: rgb(60, 255, 0); height: 200px; width: 250px;">
+            </div>
         </section>
 
     </main>

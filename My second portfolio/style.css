@@ -20,22 +20,18 @@ a {
 }
 
 header {
-    background-color: #2B0E66;
+    background-color: #00BE67;
     height: 60px;
     padding: 10px;
     padding-top: 0;
     margin-bottom: 50px;
-    box-shadow: 0 10px 50px #2B0E66;
+    box-shadow: 0 10px 50px #00A1D5;
 }
 
 .logo {
     width: 110px;
     height: 110px;
     position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     background-color: #F500BD;
 }
@@ -55,10 +51,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-weight: 300;
     font-size: 30px;
-    text-shadow: 0 0 4px #F500BD;
-    color: #ffbffd;
+    color: #001D31;
 
     font-family: "Anta", sans-serif;
 }
@@ -67,16 +62,68 @@ header {
     cursor: pointer;
 }
 
-.HoverExpasion {
+/*Themes sections*/
+.Themes {
+    margin: 50px;
 
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Theme_button {
+    height: 150px;
+    width: 250px;
+    border: none;
+    border-radius: 30px;
+
+    font-family: "Kode Mono", sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s;
 }
 
-.HoverExpasion:hover {
+.Theme_button:hover {
+    cursor: pointer;
     transform: scale(1.1);
-    transform-origin: top;
+    transform-origin: center;
+    box-shadow: 0 0 15px #F500BD;
 }
 
-.Themes {}
+.Theme_button:active {
+    transform: scale(1);
+    transform-origin: center;
+    transition: all 0s;
+}
 
-.Theme_button {}
+.cyberPunk_button {
+    background-image: url('themeImages/theme\ \(1\).jpg');
+    /* Substitua pelo caminho da sua imagem */
+    color: #F500BD;
+    text-shadow: 0 0 10px #001D31;
+}
+
+.SolarPunk_button {
+    background-image: url('themeImages/theme\ \(1\).webp');
+    /* Substitua pelo caminho da sua imagem */
+    color: #aaff00;
+    text-shadow: 0 0 10px #001D31;
+}
+
+.SteamPunk_button {
+    background-image: url('themeImages/theme\ \(2\).jpg');
+    /* Substitua pelo caminho da sua imagem */
+    color: #ffea00;
+    text-shadow: 0 0 10px #001D31;
+}
+
+/*Highlight sections*/
