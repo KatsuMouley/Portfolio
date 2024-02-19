@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+a {
+    all: unset;
+}
+
+header {
+    background-color: rgb(78, 78, 78);
+    height: 60px;
+    padding: 10px;
+    padding-top: 0;
+    margin-bottom: 50px;
+}
+
+.logo {
+    background-color: rgb(23, 9, 36);
+    border-radius: 0 0 25% 25%;
+    width: 140px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.nav {}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(136, 106, 163);
+    border-radius: 0 0 25% 25%;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.nav a:hover {
+    cursor: pointer;
+}

@@ -10,14 +10,15 @@
 </head>
 
 <body>
-    <header style="display: flex; flex-direction: row; gap: 20px;">
+    <header style="display: flex; flex-direction: row; gap: 50px;">
         <div class="logo">Logo</div>
-        <div class="nav">
+        <div class="nav" style="display: flex; flex-direction: row; gap: 100px;">
             <a href="">Works</a>
             <a href="">About Me</a>
             <a href="">contact</a>
         </div>
     </header>
+
     <main>
         <section class="ShowOff">
             <div class="Themes" style="display: flex; flex-direction: row; gap: 60px;">
@@ -33,6 +34,7 @@
                 <i class="fa fa-chevron-right highlight_arrow"></i>
             </div>
         </section>
+
         <section class="portfolio_grid">
             <div class="search_bar" style="display: flex; flex-direction: row;">
                 <select class="search_definitions_orderby" name="" id="" class="orderby">
@@ -63,20 +65,41 @@
                 <input class="SearchInput" type="text" placeholder="Search">
 
                 <select class="grid_display_opt" name="" id="" class="grid_display">
-                    <option value="3x3">2 by 3</option>
+                    <option value="3x3">3 by 3</option>
                     <option value="3x3">4 by 5</option>
                     <option value="3x3">4 by 8</option>
                 </select>
             </div>
-            div.
-            <div class="blogs">
-                <!-- Esta parte ficaria ao lado do grid do portfolio, e seria onde eu colocaria os mais recentes posts de blogs e contas para atualização/ por exemplo um post no twitter falando sobre trabalhos que eu realizei-->
-            </div>
-            <div class="portfolio_grid">
-                <!-- Aqui seria o grid do portfolio, onde estaria os trabalhos que realizei-->
+            <div class="portfolio_display" style="display: flex; flex-direction: row;">
+                <div class="blogs" style="display: flex; flex-direction: column;">
+                    <!-- Esta parte ficaria ao lado do grid do portfolio, e seria onde eu colocaria os mais recentes posts de blogs e contas para atualização/ por exemplo um post no twitter falando sobre trabalhos que eu realizei-->
+                </div>
+                <div class="portfolio_grid 3by3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; /* Exemplo de três colunas com larguras proporcionais */
+                grid-template-rows: 1fr 1fr 1fr; gap: 10px; ">
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <div class="grid_square" style="background-color: rgb(96, 96, 163); height: 200px; width: 250px;">
+                    </div>
+                    <!-- Aqui seria o grid do portfolio, onde estaria os trabalhos que realizei-->
+                </div>
             </div>
 
         </section>
+
         <section class="AboutMe">
             <div class="Picture">
             </div>
@@ -84,10 +107,13 @@
 
             </div>
         </section>
+
         <section class="ContactMe">
 
         </section>
+
     </main>
+
     <footer>
         <div class="FunnyFooter">
             <!-- neste footer, havera um emoji que ao clicar, faça uma cara engraçada!-->
