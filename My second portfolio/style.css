@@ -24,7 +24,7 @@ header {
     height: 60px;
     padding: 10px;
     padding-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     box-shadow: 0 10px 50px #00A1D5;
 }
 
@@ -64,7 +64,7 @@ header {
 
 /*Themes sections*/
 .Themes {
-    margin: 50px;
+    margin: 35px;
 
     display: flex;
     flex-direction: row;
@@ -127,3 +127,53 @@ header {
 }
 
 /*Highlight sections*/
+.highlight {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px;
+}
+
+.highlight_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 850px;
+    height: 500px;
+    color: #001D31;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00BE67;
+}
+
+.highlight_arrow {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    margin: 50px;
+    transition: all 0.5s;
+}
+
+.highlight_arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.search_bar {
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    flex-direction: row;
+}
+
+.search_definitions {}
+
+.blogs {
+    height: 630px;
+    width: 500px;
+    background-color: #F500BD;
+    margin: 0 50px;
+}
+
+.portfolio_display {
+    margin-top: 25px;
+}
