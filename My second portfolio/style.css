@@ -20,7 +20,7 @@ a {
 }
 
 header {
-    background-color: #00BE67;
+    background-color: #ffffff;
     height: 60px;
     padding: 10px;
     padding-top: 0;
@@ -64,7 +64,7 @@ header {
 
 /*Themes sections*/
 .Themes {
-    margin: 35px;
+    margin: 25px;
 
     display: flex;
     flex-direction: row;
@@ -74,8 +74,8 @@ header {
 }
 
 .Theme_button {
-    height: 150px;
-    width: 250px;
+    height: 100px;
+    width: 180px;
     border: none;
     border-radius: 30px;
 
@@ -139,8 +139,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    width: 850px;
-    height: 500px;
+    width: 550px;
+    height: 340px;
     color: #001D31;
     border-radius: 20px;
     box-shadow: 0 0 10px #00BE67;
@@ -159,6 +159,10 @@ header {
     transform: scale(1.1);
 }
 
+.transition_section{
+    height: 120px;
+}
+
 .search_bar {
     background-color: rgb(220, 220, 220);
     display: flex;
@@ -175,7 +179,9 @@ header {
 }
 
 .search_definitions{
-    padding: 15px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: "Kode Mono", sans-serif;
 }
 .orderby{
 
@@ -184,7 +190,7 @@ header {
 
 }
 .SearchInput{
-    width: 800px;
+    width: 600px;
     font-size: 20px;
 }
 .search-button{
@@ -193,7 +199,7 @@ header {
     background-color: #001D31;
     color: white;
     font-size: 18px;
-    padding: 10px;
+    padding: 5px;
     transition: all .3s;
 }
 .search-button:hover{
