@@ -64,14 +64,48 @@ header {
 
 /*Themes sections*/
 .Themes {
-    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
 
+.themes_buttons_container{
+    margin: 15px;
     display: flex;
     flex-direction: row;
     gap: 60px;
     justify-content: center;
     padding: 10px;
+    border: none;
+    border-width: 12px;
+    border-color: white;
+    border-radius: 25px;
 }
+.themes_title{
+    display: flex;
+    justify-content: center;
+    animation-name: themes_button;
+    font-family: "kode mono", sans-serif;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+    width: auto;
+}
+
+@keyframes themes_button{
+    0% { transform: scale(1) rotate(15deg);
+        color: #F500BD;}
+    25% { transform: scale(1.1) rotate(-15deg);
+        color: #00BE67;}
+    50% { transform: scale(.9) rotate(15deg);
+        color: #ffffff;}
+    75% { transform: scale(1.1) rotate(-15deg);
+        color: #ffea00;}
+    100% { transform: scale(1) rotate(15deg);
+        color: #F500BD;}
+}
+
 
 .Theme_button {
     height: 100px;
@@ -133,17 +167,25 @@ header {
     justify-content: center;
     margin: 25px;
 }
+.highlight_block{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
 .highlight_image {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    width: 550px;
+    width: 980px;
     height: 340px;
     color: #001D31;
     border-radius: 20px;
     box-shadow: 0 0 10px #00BE67;
+}
+.highlight_description{
+    text-wrap: wrap;
 }
 
 .highlight_arrow {
@@ -189,6 +231,10 @@ header {
     padding: 5px;
     font-size: 18px;
     font-family: "Kode Mono", sans-serif;
+    
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .orderby {}
@@ -198,6 +244,9 @@ header {
 .SearchInput {
     width: 600px;
     font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .search-button {
@@ -208,6 +257,7 @@ header {
     font-size: 18px;
     padding: 5px;
     transition: all .3s;
+
 }
 
 .search-button:hover {
@@ -224,7 +274,7 @@ header {
     display: flex;
     flex-direction: column;
     height: calc(135px * 5);
-    width: 800px;
+    width: 80vh;
     margin: 0 15px;
     box-shadow: 0 0 10px #00BE67;
     justify-content: center;
@@ -284,7 +334,13 @@ header {
 
 .grid_square {
     background-color: rgb(255, 255, 255);
-    padding: 100px 150px;
+    padding: 10vh 15vh;
     box-shadow: 0 0 10px #00BE67;
     border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.grid_square:hover{
+    scale: 1.05;
+    cursor: pointer;
 }
