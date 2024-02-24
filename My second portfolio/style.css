@@ -70,7 +70,7 @@ header {
     gap: 10px;
 }
 
-.themes_buttons_container{
+.themes_buttons_container {
     margin: 15px;
     display: flex;
     flex-direction: row;
@@ -82,28 +82,44 @@ header {
     border-color: white;
     border-radius: 25px;
 }
-.themes_title{
+
+.themes_title {
     display: flex;
     justify-content: center;
     animation-name: themes_button;
+    font-size: 20px;
     font-family: "kode mono", sans-serif;
-    animation-duration: 10s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     position: relative;
     width: auto;
 }
 
-@keyframes themes_button{
-    0% { transform: scale(1) rotate(15deg);
-        color: #F500BD;}
-    25% { transform: scale(1.1) rotate(-15deg);
-        color: #00BE67;}
-    50% { transform: scale(.9) rotate(15deg);
-        color: #ffffff;}
-    75% { transform: scale(1.1) rotate(-15deg);
-        color: #ffea00;}
-    100% { transform: scale(1) rotate(15deg);
-        color: #F500BD;}
+@keyframes themes_button {
+    0% {
+        transform: scale(.9) rotate(10deg);
+        color: #F500BD;
+    }
+
+    25% {
+        transform: scale(1) rotate(-5deg);
+        color: #00BE67;
+    }
+
+    50% {
+        transform: scale(.8) rotate(8deg);
+        color: #ffffff;
+    }
+
+    75% {
+        transform: scale(1) rotate(-15deg);
+        color: #ffea00;
+    }
+
+    100% {
+        transform: scale(.9) rotate(10deg);
+        color: #F500BD;
+    }
 }
 
 
@@ -167,7 +183,8 @@ header {
     justify-content: center;
     margin: 25px;
 }
-.highlight_block{
+
+.highlight_block {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -184,7 +201,8 @@ header {
     border-radius: 20px;
     box-shadow: 0 0 10px #00BE67;
 }
-.highlight_description{
+
+.highlight_description {
     text-wrap: wrap;
 }
 
@@ -231,7 +249,7 @@ header {
     padding: 5px;
     font-size: 18px;
     font-family: "Kode Mono", sans-serif;
-    
+
     border: none;
     border-radius: 15px;
     padding: 5px;
@@ -269,6 +287,12 @@ header {
 .grid_display_opt {}
 
 
+.portfolio_display {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+
 .blogs {
     background-color: #ffffff;
     display: flex;
@@ -286,11 +310,6 @@ header {
     border-radius: 25px;
 }
 
-.portfolio_display {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
 
 .portfolio_grid {
     background-color: #ffffff;
@@ -326,21 +345,39 @@ header {
     cursor: crosshair;
 }
 
-.display_3by3 {
+/*Display portfolio grid by 3 columns*/
+.display_3columns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
+.display_3columns .grid_square {
+    height: 280px;
+}
+
+/*Display portfolio grid by 6 columns*/
+.display_6columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.display_6columns .grid_square {
+    height: 150px;
+}
+
+
+
 .grid_square {
     background-color: rgb(255, 255, 255);
-    padding: 10vh 15vh;
+    width: auto;
     box-shadow: 0 0 10px #00BE67;
     border-radius: 25px;
     transition: all 0.3s;
 }
 
-.grid_square:hover{
+.grid_square:hover {
     scale: 1.05;
     cursor: pointer;
 }
