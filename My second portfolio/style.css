@@ -28,18 +28,21 @@ header {
     box-shadow: 0 10px 50px #00A1D5;
 }
 
-.logo {
-    color: black;
-}
-
 .logo:hover {
     cursor: pointer;
+}
+
+.slideButton{
+    border: none;
+    background-color: transparent;
+    font-size: 35px;
 }
 
 .nav_bar {
     display: flex;
     flex-direction: row;
     gap: 100px;
+    margin: 10px;
     justify-content: center;
 }
 
@@ -52,10 +55,17 @@ header {
     color: #001D31;
 
     font-family: "Anta", sans-serif;
+    transition: all 0.2s;
 }
 
 .nav_button:hover {
     cursor: pointer;
+    scale: 1.1;
+}
+
+.nav_button:active{
+    cursor: grab;
+    scale: 1;
 }
 
 /*Themes sections*/
@@ -268,8 +278,8 @@ header {
     border-radius: 25px;
     background-color: #001D31;
     color: white;
-    font-size: 18px;
-    padding: 5px;
+    font-size: 24px;
+    padding: 15px;
     transition: all .3s;
 
 }
@@ -278,6 +288,9 @@ header {
     cursor: pointer;
     transform: scale(1.1);
 }
+.search-button:active{
+    transform: scale(.9);
+} 
 
 /*Grid display*/
 .grid_display_opt {}
@@ -349,7 +362,7 @@ header {
 }
 
 .display_3columns .grid_square {
-    height: 280px;
+    height: 22vh;
 }
 
 /*Display portfolio grid by 6 columns*/
@@ -362,8 +375,6 @@ header {
 .display_5columns .grid_square {
     height: 15vh;
 }
-
-
 
 .grid_square {
     background-color: rgb(255, 255, 255);
