@@ -29,11 +29,7 @@ header {
 }
 
 .logo {
-    width: 110px;
-    height: 110px;
-    position: relative;
-
-    background-color: #F500BD;
+    color: black;
 }
 
 .logo:hover {
@@ -357,14 +353,14 @@ header {
 }
 
 /*Display portfolio grid by 6 columns*/
-.display_6columns {
+.display_5columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
-.display_6columns .grid_square {
-    height: 150px;
+.display_5columns .grid_square {
+    height: 15vh;
 }
 
 
