@@ -240,11 +240,13 @@ header {
     background-color: rgb(220, 220, 220);
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 25px;
-    width: fit-content;
+    width: auto;
     padding: 30px;
-
+    /*
     border-radius: 0 25px 25px 0;
+    */
 }
 
 .portfolio_display {
@@ -298,11 +300,12 @@ header {
 
 .portfolio_display {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     height: 66vh;
     gap: 10px;
 }
 
+/*
 .blogs {
     background-color: #ffffff;
     display: flex;
@@ -319,7 +322,7 @@ header {
     font-family: "Anta", sans-serif;
     border-radius: 25px;
 }
-
+*/
 .portfolio_grid {
     background-color: #ffffff;
     padding: 15px;
@@ -358,12 +361,12 @@ header {
 /*Display portfolio grid by 3 columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .display_columns .grid_square {
-    height: 20vh;
+    height: 30vh;
 }
 
 .grid_square {
