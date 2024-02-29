@@ -349,7 +349,7 @@ header {
 }
 
 .display_3columns .grid_square {
-    height: 280px;
+    height: 24vh;
 }
 
 /*Display portfolio grid by 6 columns*/
