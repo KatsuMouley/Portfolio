@@ -325,8 +325,8 @@ header {
     padding: 15px;
     box-shadow: 0 0 10px #00BE67;
     width: auto;
-    height: 660px;
-    max-height: 630px;
+    height: auto;
+    max-height: 66vh;
     overflow-y: auto;
     border-radius: 25px;
 }
@@ -357,15 +357,13 @@ header {
 
 /*Display portfolio grid by 3 columns*/
 .display_columns {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .display_columns .grid_square {
-    height: 250px;
-    width: 200px;
+    height: 20vh;
 }
 
 .grid_square {
