@@ -292,14 +292,17 @@ header {
 .search-button:active {
     transform: scale(.9);
 }
+<<<<<<< HEAD
 
 /*Grid display*/
 .grid_display_opt {}
 
+=======
+>>>>>>> 4e863e027b5c84d1712a89e181635fb90da993cf
 
 .portfolio_display {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 10px;
 }
 
@@ -307,8 +310,8 @@ header {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    height: calc(135px * 5);
-    width: 80vh;
+    height: 660px;
+    width: auto;
     margin: 0 15px;
     box-shadow: 0 0 10px #00BE67;
     justify-content: center;
@@ -320,13 +323,13 @@ header {
     border-radius: 25px;
 }
 
-
 .portfolio_grid {
     background-color: #ffffff;
     padding: 15px;
     box-shadow: 0 0 10px #00BE67;
+    width: auto;
     height: fit-content;
-    max-height: calc(135px * 5);
+    max-height: 630px;
     overflow-y: auto;
     border-radius: 25px;
 }
@@ -345,23 +348,24 @@ header {
 
 /* Handle */
 .portfolio_grid::-webkit-scrollbar-thumb {
-    background: #00BE67;
+    background: #fdfdfd;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 .portfolio_grid::-webkit-scrollbar-thumb:hover {
-    background: #006538;
+    background: #c0c0c0;
     cursor: crosshair;
 }
 
 /*Display portfolio grid by 3 columns*/
 .display_3columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
+<<<<<<< HEAD
 /*Display portfolio grid by 6 columns*/
 .display_5columns {
     display: grid;
@@ -371,17 +375,21 @@ header {
 
 .display_5columns .grid_square {
     height: 15vh;
+=======
+.display_3columns .grid_square {
+    width: auto;
+    height: 46vh;
+>>>>>>> 4e863e027b5c84d1712a89e181635fb90da993cf
 }
 
 .grid_square {
     background-color: rgb(255, 255, 255);
-    width: auto;
     box-shadow: 0 0 10px #00BE67;
     border-radius: 25px;
     transition: all 0.3s;
 }
 
 .grid_square:hover {
-    scale: 1.05;
+    scale: 1.02;
     cursor: pointer;
 }
