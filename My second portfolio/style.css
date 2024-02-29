@@ -261,10 +261,11 @@ header {
     padding: 5px;
 }
 
+/*
 .orderby {}
 
 .categories {}
-
+*/
 .SearchInput {
     width: 600px;
     font-size: 20px;
@@ -292,17 +293,13 @@ header {
 .search-button:active {
     transform: scale(.9);
 }
-<<<<<<< HEAD
 
 /*Grid display*/
-.grid_display_opt {}
-
-=======
->>>>>>> 4e863e027b5c84d1712a89e181635fb90da993cf
 
 .portfolio_display {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
+    height: 66vh;
     gap: 10px;
 }
 
@@ -310,8 +307,8 @@ header {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    height: 660px;
     width: auto;
+    height: auto;
     margin: 0 15px;
     box-shadow: 0 0 10px #00BE67;
     justify-content: center;
@@ -328,7 +325,7 @@ header {
     padding: 15px;
     box-shadow: 0 0 10px #00BE67;
     width: auto;
-    height: fit-content;
+    height: 660px;
     max-height: 630px;
     overflow-y: auto;
     border-radius: 25px;
@@ -359,27 +356,16 @@ header {
 }
 
 /*Display portfolio grid by 3 columns*/
-.display_3columns {
-    display: grid;
-    grid-template-columns: 1fr;
+.display_columns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     gap: 20px;
 }
 
-<<<<<<< HEAD
-/*Display portfolio grid by 6 columns*/
-.display_5columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.display_5columns .grid_square {
-    height: 15vh;
-=======
-.display_3columns .grid_square {
-    width: auto;
-    height: 46vh;
->>>>>>> 4e863e027b5c84d1712a89e181635fb90da993cf
+.display_columns .grid_square {
+    height: 250px;
+    width: 200px;
 }
 
 .grid_square {
