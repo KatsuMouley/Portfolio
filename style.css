@@ -76,10 +76,10 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 30px;
-    color: #001D31;
-
+    font-size: 3vh;
     font-family: "Anta", sans-serif;
+    text-wrap: nowrap;
+    color: #001D31;
     transition: all 0.2s;
 }
 
@@ -117,12 +117,9 @@ header {
 
 .sidebar_logo {
     display: flex;
-    gap: 10px;
     justify-content: center;
     align-self: center;
-    /*--------------------------------*/
 }
-
 
 .letter_K {
     color: #000000;
@@ -130,7 +127,7 @@ header {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     text-shadow: -10px 10px 15px var(--DARKER-BLUE);
-    font-size: 50px;
+    font-size: 5vh;
     padding: 20px;
 
 }
