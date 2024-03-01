@@ -21,12 +21,22 @@
 */
 /*-----------------------------------------------------------------------*/
 :root {
-    --DARKER-BLUE: #001D31;
-    --LIGHT-GREEN: #00BE67;
-    --LIGHT-BLUE: #00A1D5;
-    --DARKER-PURPLE: #2B0E66;
-    --PINK: #F500BD;
-    --LIGHT-PINK: #FF86C9;
+    --Color-DARKER-BLUE: #001D31;
+    --Color-LIGHT-GREEN: #00BE67;
+    --Color-LIGHT-BLUE: #00A1D5;
+    --Color-DARKER-PURPLE: #2B0E66;
+    --Color-PINK: #F500BD;
+    --Color-LIGHT-PINK: #FF86C9;
+    /*Fonts*/
+    --fonts2-micro-5: "Micro 5", sans-serif;
+    --fonts2-Caveat: "Caveat", cursive;
+    --fonts2-Slackside-One: "Slackside One", cursive;
+    --fonts2-Playfair-display: "Playfair Display", serif;
+    --fonts2-Ojuju: "Ojuju", sans-serif;
+    --fonts2-Madimi-One: "Madimi One", sans-serif;
+    /*Main Fonts*/
+    --fonts1-Anta: "Anta", sans-serif;
+    --fonts1-Kode_Mono: "Kode Mono", sans-serif;
 }
 
 a {
@@ -35,7 +45,7 @@ a {
 
 body {
     margin: 0;
-    background-color: var(--DARKER-BLUE);
+    background-color: var(--Color-DARKER-BLUE);
     color: #ffffff;
 }
 
@@ -50,7 +60,10 @@ header {
     padding: 10px;
     padding-top: 0;
     margin-bottom: 25px;
-    box-shadow: 0 10px 25px var(--LIGHT-BLUE);
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .logo:hover {
@@ -60,13 +73,13 @@ header {
 .slideButton {
     border: none;
     background-color: transparent;
-    font-size: 35px;
+    font-size: 3vh;
 }
 
 .nav_bar {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 10vh;
     margin: 10px;
     justify-content: center;
 }
@@ -76,10 +89,10 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 3vh;
-    font-family: "Anta", sans-serif;
+    font-size: 2.8vh;
+    font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
-    color: #001D31;
+    color: var(--Color-DARKER-BLUE);
     transition: all 0.2s;
 }
 
@@ -105,9 +118,9 @@ header {
     gap: 10px;
     /*--------------------------------*/
     position: fixed;
-    top: 6vh;
+    top: 7.1vh;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     /*--------------------------------*/
     background-color: white;
     /*--------------------------------*/
@@ -115,18 +128,33 @@ header {
     height: 100%;
 }
 
+.Close_Sidebar {
+    animation-name: Close;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.Open_Sidebar {
+    animation-name: Open;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
 .sidebar_logo {
     display: flex;
     justify-content: center;
     align-self: center;
+    height: 15vh;
+    width: 100%;
+    background-color: var(--Color-LIGHT-GREEN);
 }
 
 .letter_K {
-    color: #000000;
+    color: #ffffff;
     animation-name: logo_changing;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    text-shadow: -10px 10px 15px var(--DARKER-BLUE);
+    text-shadow: -10px 10px 15px var(--Color-DARKER-BLUE);
     font-size: 5vh;
     padding: 20px;
 
@@ -164,6 +192,41 @@ header {
 
 }
 
+.Sidebar_Button {
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar_Button:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.Sidebar_Button:hover .Sidebar_Button_Icon {
+    transform: scale(1.3);
+}
+
+.Sidebar_Button:active {
+    background-color: rgb(202, 202, 202);
+}
+
+.Sidebar_Button_Icon {
+    width: 1fr;
+    color: black;
+    font-size: 5vh;
+    padding: 20px;
+    transition: all .3s ease;
+}
+
+.Sidebar_Button_Name {
+    display: flex;
+    align-items: center;
+    width: 3fr;
+    font-size: 28px;
+    color: black;
+    font-family: var(--fonts1-Kode_Mono);
+}
+
 /*End of the section*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -180,7 +243,7 @@ header {
     margin: 15px;
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 6vh;
     justify-content: center;
     padding: 10px;
     border: none;
@@ -193,7 +256,7 @@ header {
     display: flex;
     justify-content: center;
     animation-name: themes_button;
-    font-size: 20px;
+    font-size: 2vh;
     font-family: "kode mono", sans-serif;
     animation-duration: 6s;
     animation-iteration-count: infinite;
@@ -264,8 +327,8 @@ header {
 .cyberPunk_button {
     background-image: url('themeImages/theme\ \(1\).jpg');
     /* Substitua pelo caminho da sua imagem */
-    color: #F500BD;
-    text-shadow: 0 0 10px #001D31;
+    color: var(--Color-PINK);
+    text-shadow: 0 0 10px var(--Color-DARKER-BLUE);
 }
 
 .SolarPunk_button {
@@ -319,8 +382,8 @@ header {
 .highlight_arrow {
     display: flex;
     align-items: center;
-    font-size: 70px;
-    margin: 50px;
+    font-size: 7vh;
+    margin: 3vh;
     transition: all 0.5s;
 }
 
@@ -464,14 +527,15 @@ header {
     cursor: crosshair;
 }
 
-/*Display portfolio grid by 3 columns*/
+/*Display portfolio grid by columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 48vh 48vh 48vh 48vh;
     gap: 20px;
 }
 
 .display_columns .grid_square {
+    width: 100%;
     height: 30vh;
 }
 
