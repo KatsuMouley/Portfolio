@@ -467,10 +467,9 @@ header {
 /*Grid display*/
 
 .portfolio_display {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     height: 66vh;
-    gap: 10px;
+    justify-content: center;
 }
 
 /*
@@ -492,9 +491,9 @@ header {
 }
 */
 .portfolio_grid {
-    padding: 15px;
+    padding: 30px;
     box-shadow: 0 0 10px #00BE67;
-    width: auto;
+    width: fit-content;
     height: auto;
     max-height: 66vh;
     overflow-y: auto;
@@ -510,32 +509,13 @@ header {
 /*Display portfolio grid by columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 48vh 48vh 48vh 48vh;
-    gap: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-    .display_columns {
-        grid-template-columns: 48vh;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .display_columns {
-        grid-template-columns: 48vh 48vh;
-    }
-}
-
-
-@media only screen and (min-width: 1200px) {
-    .display_columns {
-        grid-template-columns: 48vh 48vh 48vh 48vh;
-    }
+    grid-template-columns: 96vh 96vh;
+    gap: 40px;
 }
 
 .display_columns .grid_square {
     width: auto;
-    height: 27vh;
+    height: 54vh;
 }
 
 .grid_square {
@@ -546,7 +526,7 @@ header {
 }
 
 .grid_square:hover {
-    scale: 1.02;
+    scale: 1.05;
     cursor: pointer;
 }
 
