@@ -89,7 +89,7 @@ header {
 .nav_select {
     display: flex;
     flex-direction: row;
-    gap: 1.5vh;
+    gap: 3vh;
     justify-content: center;
 }
 
@@ -98,7 +98,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 1.8vh;
+    font-size: 2vh;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -136,13 +136,14 @@ header {
     left: 0;
     z-index: 1;
     /*--------------------------------*/
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     /*--------------------------------*/
     width: 30vh;
     height: 75vh;
     transition: all 0.5s ease;
     border-radius: 0 0 35px 35px;
     overflow-y: auto;
+
 }
 
 .sidebar::-webkit-scrollbar {
@@ -304,6 +305,7 @@ header {
 
 
 .Theme_button {
+    display: flex;
     height: 8vh;
     width: 14vh;
     border: none;
@@ -380,18 +382,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+}
+
+.highlight_image img {
     width: 36vh;
     height: 20vh;
-    color: #001D31;
+    object-fit: cover;
+    object-position: 50% 30%;
     border-radius: 20px;
     box-shadow: 0 0 10px #00BE67;
 }
+
 
 .highlight_description {
     width: auto;
     font-size: 1.8vh;
     text-wrap: wrap;
+    font-family: var(--fonts1-Kode_Mono);
 }
 
 .highlight_arrow {
