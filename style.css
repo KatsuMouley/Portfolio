@@ -514,9 +514,15 @@ header {
     gap: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+    .display_columns {
+        grid-template-columns: 48vh 48vh 48vh 48vh;
+    }
+}
+
 .display_columns .grid_square {
-    width: 100%;
-    height: 30vh;
+    width: 48vh;
+    height: 27vh;
 }
 
 .grid_square {
