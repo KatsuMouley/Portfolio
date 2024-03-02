@@ -520,6 +520,19 @@ header {
     }
 }
 
+@media only screen and (min-width: 992px) {
+    .display_columns {
+        grid-template-columns: 48vh 48vh;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .display_columns {
+        grid-template-columns: 48vh 48vh 48vh 48vh;
+    }
+}
+
 .display_columns .grid_square {
     width: auto;
     height: 27vh;
