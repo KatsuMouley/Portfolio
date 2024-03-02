@@ -514,14 +514,14 @@ header {
     gap: 20px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .display_columns {
-        grid-template-columns: 48vh 48vh 48vh 48vh;
+        grid-template-columns: 48vh;
     }
 }
 
 .display_columns .grid_square {
-    width: 48vh;
+    width: auto;
     height: 27vh;
 }
 
