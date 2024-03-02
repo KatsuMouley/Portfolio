@@ -115,7 +115,7 @@ header {
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     /*--------------------------------*/
     position: fixed;
     top: 6vh;
@@ -125,9 +125,14 @@ header {
     background-color: white;
     /*--------------------------------*/
     width: 40vh;
-    height: 100%;
+    height: 90%;
     transition: all 0.5s ease;
-    border-radius: 25px 0;
+    border-radius: 0 0 35px 35px;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar.close {
@@ -488,7 +493,6 @@ header {
 }
 */
 .portfolio_grid {
-    background-color: #ffffff;
     padding: 15px;
     box-shadow: 0 0 10px #00BE67;
     width: auto;
@@ -496,30 +500,12 @@ header {
     max-height: 66vh;
     overflow-y: auto;
     border-radius: 25px;
+    margin: 10px;
 }
 
 
 .portfolio_grid::-webkit-scrollbar {
-    width: 20px;
-}
-
-/* Track */
-.portfolio_grid::-webkit-scrollbar-track {
-    background-color: #13415f;
-    box-shadow: inset 0 0 5px #00BE67;
-    border-radius: 10px;
-}
-
-/* Handle */
-.portfolio_grid::-webkit-scrollbar-thumb {
-    background: #fdfdfd;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-.portfolio_grid::-webkit-scrollbar-thumb:hover {
-    background: #c0c0c0;
-    cursor: crosshair;
+    display: none;
 }
 
 /*Display portfolio grid by columns*/
