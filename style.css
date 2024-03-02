@@ -49,6 +49,11 @@ body {
     color: #ffffff;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 /*End of the section*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -60,7 +65,7 @@ header {
 
     background-color: #ffffff;
 
-    height: 5vh;
+    height: 50px;
 
     padding: 5px;
 
@@ -71,16 +76,16 @@ header {
 
 
 .nav_bar {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
-    grid-template-columns: 1fr 9fr;
     justify-content: center;
 }
 
 .nav_select {
     display: flex;
     flex-direction: row;
-    gap: 5vw;
+    gap: 15px;
     justify-content: center;
 }
 
@@ -89,7 +94,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.8vh;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -99,7 +104,7 @@ header {
 .Sidebartoggle {
     border: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 2vh;
 }
 
 .nav_button:hover {
@@ -241,14 +246,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 1vh;
 }
 
 .themes_buttons_container {
-    margin: 15px;
+    margin: 1.5vh;
     display: flex;
     flex-direction: row;
-    gap: 6vh;
+    gap: 10px;
     justify-content: center;
     padding: 10px;
     border: none;
@@ -258,12 +263,11 @@ header {
     display: flex;
     justify-content: center;
     animation-name: themes_button;
-    font-size: 2vh;
+    font-size: 1.6vh;
     font-family: "kode mono", sans-serif;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     position: relative;
-    width: auto;
 }
 
 @keyframes themes_button {
@@ -295,13 +299,13 @@ header {
 
 
 .Theme_button {
-    height: 100px;
-    width: 180px;
+    height: 8vh;
+    width: 14vh;
     border: none;
     border-radius: 30px;
 
     font-family: "Kode Mono", sans-serif;
-    font-size: 24px;
+    font-size: 2vh;
     font-weight: bolder;
 
     background-size: cover;
@@ -356,13 +360,15 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 25px;
+    margin: 15px;
 }
 
 .highlight_block {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
 }
 
 .highlight_image {
@@ -370,8 +376,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    width: 640px;
-    height: 360px;
+    width: 36vh;
+    height: 20vh;
     color: #001D31;
     border-radius: 20px;
     box-shadow: 0 0 10px #00BE67;
@@ -386,8 +392,8 @@ header {
 .highlight_arrow {
     display: flex;
     align-items: center;
-    font-size: 5vh;
-    margin: 1vh;
+    font-size: 3vh;
+    margin: 2vh;
     transition: all 0.5s;
 }
 
@@ -414,36 +420,27 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 25px;
-    width: auto;
-    padding: 30px;
+    align-items: center;
+    gap: .8vh;
+    padding: 10px;
     /*
     border-radius: 0 25px 25px 0;
     */
 }
 
-.portfolio_display {
-    margin-top: 25px;
-}
-
 .search_definitions {
+    width: 6vh;
     padding: 5px;
-    font-size: 1.6vh;
+    font-size: 1.2vh;
     font-family: "Kode Mono", sans-serif;
 
     border: none;
     border-radius: 15px;
-    padding: 5px;
 }
 
-/*
-.orderby {}
-
-.categories {}
-*/
 .SearchInput {
-    width: 60vh;
-    font-size: 2vh;
+    width: 16vh;
+    font-size: 1.8vh;
     border: none;
     border-radius: 15px;
     padding: 1vh;
@@ -454,8 +451,8 @@ header {
     border-radius: 25px;
     background-color: #001D31;
     color: white;
-    font-size: 2.4vh;
-    padding: 15px;
+    font-size: 1.4vh;
+    padding: 8px;
     transition: all .3s;
 
 }
@@ -472,6 +469,7 @@ header {
 /*Grid display*/
 
 .portfolio_display {
+    margin-top: 25px;
     display: flex;
     height: 66vh;
     justify-content: center;
@@ -496,7 +494,7 @@ header {
 }
 */
 .portfolio_grid {
-    padding: 30px;
+    padding: 10px;
     box-shadow: 0 0 10px #00BE67;
     width: fit-content;
     height: auto;
@@ -514,13 +512,13 @@ header {
 /*Display portfolio grid by columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 96vh;
-    gap: 40px;
+    grid-template-columns: 40vh;
+    gap: 20px;
 }
 
 .display_columns .grid_square {
     width: auto;
-    height: 54vh;
+    height: 26vh;
 }
 
 .grid_square {
