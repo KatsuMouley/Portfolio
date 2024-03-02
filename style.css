@@ -92,7 +92,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.6vw;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -102,7 +102,7 @@ header {
 .Sidebartoggle {
     border: none;
     background-color: transparent;
-    font-size: 3vh;
+    font-size: 2vw;
 }
 
 .nav_button:hover {
