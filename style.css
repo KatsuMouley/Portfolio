@@ -213,7 +213,7 @@ header {
 .Sidebar_Button_Icon {
     width: 1fr;
     color: black;
-    font-size: 3vh;
+    font-size: 5vh;
     padding: 20px;
     transition: all .3s ease;
 }
@@ -221,8 +221,7 @@ header {
 .Sidebar_Button_Name {
     display: flex;
     align-items: center;
-    width: 3fr;
-    font-size: 18px;
+    font-size: 2vh;
     color: black;
     font-family: var(--fonts1-Kode_Mono);
 }
