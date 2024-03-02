@@ -508,7 +508,7 @@ header {
 /*Display portfolio grid by columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 96vh 96vh;
+    grid-template-columns: 96vh;
     gap: 40px;
 }
 
