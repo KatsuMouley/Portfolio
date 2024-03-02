@@ -60,12 +60,9 @@ header {
 
     background-color: #ffffff;
 
-    width: 100vw;
-
     height: 5vh;
 
     padding: 5px;
-
 
     position: sticky;
     top: 0;
@@ -92,7 +89,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 1.6vw;
+    font-size: 3vh;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -102,7 +99,7 @@ header {
 .Sidebartoggle {
     border: none;
     background-color: transparent;
-    font-size: 2vw;
+    font-size: 5vh;
 }
 
 .nav_button:hover {
