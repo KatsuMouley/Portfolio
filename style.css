@@ -154,7 +154,7 @@ header {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     text-shadow: -10px 10px 15px var(--Color-DARKER-BLUE);
-    font-size: 20px;
+    font-size: 3vh;
     text-wrap: nowrap;
     padding: 20px;
 
