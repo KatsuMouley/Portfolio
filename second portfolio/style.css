@@ -1,0 +1,535 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Variables, fonts and others section*/
+/*Base Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap');
+/*-----------------------------------------------------------------------*/
+/*Other fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Madimi+One&family=Micro+5&family=Ojuju:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Slackside+One&display=swap');
+
+/*examples
+.micro-5-regular {
+    font-family: "Micro 5", sans-serif;
+    font-family: "Caveat", cursive;
+    font-family: "Slackside One", cursive;
+    font-family: "Playfair Display", serif;
+    font-family: "Ojuju", sans-serif;
+    font-family: "Madimi One", sans-serif;
+}
+*/
+/*-----------------------------------------------------------------------*/
+:root {
+    --Color-DARKER-BLUE: #001D31;
+    --Color-LIGHT-GREEN: #00BE67;
+    --Color-LIGHT-BLUE: #00A1D5;
+    --Color-DARKER-PURPLE: #2B0E66;
+    --Color-PINK: #F500BD;
+    --Color-LIGHT-PINK: #FF86C9;
+    /*Fonts*/
+    --fonts2-micro-5: "Micro 5", sans-serif;
+    --fonts2-Caveat: "Caveat", cursive;
+    --fonts2-Slackside-One: "Slackside One", cursive;
+    --fonts2-Playfair-display: "Playfair Display", serif;
+    --fonts2-Ojuju: "Ojuju", sans-serif;
+    --fonts2-Madimi-One: "Madimi One", sans-serif;
+    /*Main Fonts*/
+    --fonts1-Anta: "Anta", sans-serif;
+    --fonts1-Kode_Mono: "Kode Mono", sans-serif;
+}
+
+a {
+    all: unset;
+}
+
+body {
+    margin: 0;
+    background-color: var(--Color-DARKER-BLUE);
+    color: #ffffff;
+}
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Header Section*/
+header {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    width: auto;
+    height: 4vh;
+    padding: 5px;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+
+
+
+.nav_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 2vh;
+    font-family: var(--fonts1-Anta);
+    text-wrap: nowrap;
+    color: var(--Color-DARKER-BLUE);
+    transition: all 0.2s;
+}
+
+.Sidebartoggle {
+    border: none;
+    background-color: transparent;
+    font-size: 3vh;
+}
+
+.nav_button:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.nav_button:active {
+    cursor: grab;
+    scale: 1;
+}
+
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Sidebar Section*/
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*--------------------------------*/
+    position: fixed;
+    top: 4vh;
+    left: 0;
+    z-index: 1;
+    /*--------------------------------*/
+    background-color: white;
+    /*--------------------------------*/
+    width: 30vh;
+    height: 75vh;
+    transition: all 0.5s ease;
+    border-radius: 0 0 35px 35px;
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar.close {
+    top: -100%;
+    opacity: 0%;
+}
+
+.sidebar_logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--Color-LIGHT-GREEN);
+}
+
+.letter_K {
+    color: #ffffff;
+    animation-name: logo_changing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-shadow: -10px 10px 15px var(--Color-DARKER-BLUE);
+    font-size: 3vh;
+    text-wrap: nowrap;
+    padding: 20px;
+
+}
+
+
+@keyframes logo_changing {
+    0% {
+        font-family: "Micro 5", sans-serif;
+    }
+
+    16.6% {
+        font-family: "Caveat", cursive;
+    }
+
+    33.3% {
+        font-family: "Slackside One", cursive;
+    }
+
+    50% {
+        font-family: "Playfair Display", serif;
+    }
+
+    66.6% {
+        font-family: "Ojuju", sans-serif;
+    }
+
+    83.3% {
+        font-family: "Madimi One", sans-serif;
+    }
+
+    100% {
+        font-family: "Micro 5", sans-serif;
+    }
+
+}
+
+.Sidebar_Button {
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar_Button:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.Sidebar_Button:hover .Sidebar_Button_Icon {
+    transform: scale(1.3);
+}
+
+.Sidebar_Button:active {
+    background-color: rgb(202, 202, 202);
+}
+
+.Sidebar_Button_Icon {
+    width: 1fr;
+    color: black;
+    font-size: 5vh;
+    padding: 20px;
+    transition: all .3s ease;
+}
+
+.Sidebar_Button_Name {
+    display: flex;
+    align-items: center;
+    font-size: 2vh;
+    color: black;
+    font-family: var(--fonts1-Kode_Mono);
+}
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Themes sections*/
+.Themes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.themes_buttons_container {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 6vh;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+}
+
+.themes_title {
+    display: flex;
+    justify-content: center;
+    animation-name: themes_button;
+    font-size: 2vh;
+    font-family: "kode mono", sans-serif;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    width: auto;
+}
+
+@keyframes themes_button {
+    0% {
+        transform: scale(.9) rotate(10deg);
+        color: #F500BD;
+    }
+
+    25% {
+        transform: scale(1) rotate(-5deg);
+        color: #00BE67;
+    }
+
+    50% {
+        transform: scale(.8) rotate(8deg);
+        color: #ffffff;
+    }
+
+    75% {
+        transform: scale(1) rotate(-15deg);
+        color: #ffea00;
+    }
+
+    100% {
+        transform: scale(.9) rotate(10deg);
+        color: #F500BD;
+    }
+}
+
+
+.Theme_button {
+    height: 100px;
+    width: 180px;
+    border: none;
+    border-radius: 30px;
+
+    font-family: "Kode Mono", sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.Theme_button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: center;
+    box-shadow: 0 0 15px #F500BD;
+}
+
+.Theme_button:active {
+    transform: scale(1);
+    transform-origin: center;
+    transition: all 0s;
+}
+
+.cyberPunk_button {
+    background-image: url('themeImages/theme\ \(1\).jpg');
+    /* Substitua pelo caminho da sua imagem */
+    color: var(--Color-PINK);
+    text-shadow: 0 0 10px var(--Color-DARKER-BLUE);
+}
+
+.SolarPunk_button {
+    background-image: url('themeImages/theme\ \(1\).webp');
+    /* Substitua pelo caminho da sua imagem */
+    color: #aaff00;
+    text-shadow: 0 0 10px #001D31;
+}
+
+.SteamPunk_button {
+    background-image: url('themeImages/theme\ \(2\).jpg');
+    /* Substitua pelo caminho da sua imagem */
+    color: #ffea00;
+    text-shadow: 0 0 10px #001D31;
+}
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Highlight section*/
+.highlight {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px;
+}
+
+.highlight_block {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.highlight_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 640px;
+    height: 360px;
+    color: #001D31;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00BE67;
+}
+
+.highlight_description {
+    width: auto;
+    font-size: 1.8vh;
+    text-wrap: wrap;
+}
+
+.highlight_arrow {
+    display: flex;
+    align-items: center;
+    font-size: 5vh;
+    margin: 1vh;
+    transition: all 0.5s;
+}
+
+.highlight_arrow:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Works section*/
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Search bar*/
+.search_bar {
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    width: auto;
+    padding: 30px;
+    /*
+    border-radius: 0 25px 25px 0;
+    */
+}
+
+.portfolio_display {
+    margin-top: 25px;
+}
+
+.search_definitions {
+    padding: 5px;
+    font-size: 1.6vh;
+    font-family: "Kode Mono", sans-serif;
+
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+/*
+.orderby {}
+
+.categories {}
+*/
+.SearchInput {
+    width: 60vh;
+    font-size: 2vh;
+    border: none;
+    border-radius: 15px;
+    padding: 1vh;
+}
+
+.search-button {
+    border: none;
+    border-radius: 25px;
+    background-color: #001D31;
+    color: white;
+    font-size: 2.4vh;
+    padding: 15px;
+    transition: all .3s;
+
+}
+
+.search-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.search-button:active {
+    transform: scale(.9);
+}
+
+/*Grid display*/
+
+.portfolio_display {
+    display: flex;
+    height: 66vh;
+    justify-content: center;
+}
+
+/*
+.blogs {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: 0 15px;
+    box-shadow: 0 0 10px #00BE67;
+    justify-content: center;
+    align-items: center;
+    color: #001D31;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Anta", sans-serif;
+    border-radius: 25px;
+}
+*/
+.portfolio_grid {
+    padding: 30px;
+    box-shadow: 0 0 10px #00BE67;
+    width: fit-content;
+    height: auto;
+    max-height: 66vh;
+    overflow-y: auto;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+
+.portfolio_grid::-webkit-scrollbar {
+    display: none;
+}
+
+/*Display portfolio grid by columns*/
+.display_columns {
+    display: grid;
+    grid-template-columns: 96vh;
+    gap: 40px;
+}
+
+.display_columns .grid_square {
+    width: auto;
+    height: 54vh;
+}
+
+.grid_square {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #00BE67;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.grid_square:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+/*End of the section*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -57,11 +57,16 @@ body {
 header {
     display: flex;
     align-items: center;
+
     background-color: #ffffff;
-    width: auto;
-    height: 4vh;
+
+    width: 100%;
+
+    height: 5vh;
+
     padding: 5px;
-    margin-bottom: 25px;
+
+
     position: sticky;
     top: 0;
     z-index: 2;
@@ -69,20 +74,25 @@ header {
 
 
 .nav_bar {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 10fr;
     justify-content: center;
 }
 
-
+.nav_select {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    justify-content: center;
+}
 
 .nav_button {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 2vh;
+    font-size: 3vh;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -104,7 +114,6 @@ header {
     cursor: grab;
     scale: 1;
 }
-
 
 /*End of the section*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -231,305 +240,3 @@ header {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Themes sections*/
-.Themes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-.themes_buttons_container {
-    margin: 15px;
-    display: flex;
-    flex-direction: row;
-    gap: 6vh;
-    justify-content: center;
-    padding: 10px;
-    border: none;
-}
-
-.themes_title {
-    display: flex;
-    justify-content: center;
-    animation-name: themes_button;
-    font-size: 2vh;
-    font-family: "kode mono", sans-serif;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    position: relative;
-    width: auto;
-}
-
-@keyframes themes_button {
-    0% {
-        transform: scale(.9) rotate(10deg);
-        color: #F500BD;
-    }
-
-    25% {
-        transform: scale(1) rotate(-5deg);
-        color: #00BE67;
-    }
-
-    50% {
-        transform: scale(.8) rotate(8deg);
-        color: #ffffff;
-    }
-
-    75% {
-        transform: scale(1) rotate(-15deg);
-        color: #ffea00;
-    }
-
-    100% {
-        transform: scale(.9) rotate(10deg);
-        color: #F500BD;
-    }
-}
-
-
-.Theme_button {
-    height: 100px;
-    width: 180px;
-    border: none;
-    border-radius: 30px;
-
-    font-family: "Kode Mono", sans-serif;
-    font-size: 24px;
-    font-weight: bolder;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-}
-
-.Theme_button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transform-origin: center;
-    box-shadow: 0 0 15px #F500BD;
-}
-
-.Theme_button:active {
-    transform: scale(1);
-    transform-origin: center;
-    transition: all 0s;
-}
-
-.cyberPunk_button {
-    background-image: url('themeImages/theme\ \(1\).jpg');
-    /* Substitua pelo caminho da sua imagem */
-    color: var(--Color-PINK);
-    text-shadow: 0 0 10px var(--Color-DARKER-BLUE);
-}
-
-.SolarPunk_button {
-    background-image: url('themeImages/theme\ \(1\).webp');
-    /* Substitua pelo caminho da sua imagem */
-    color: #aaff00;
-    text-shadow: 0 0 10px #001D31;
-}
-
-.SteamPunk_button {
-    background-image: url('themeImages/theme\ \(2\).jpg');
-    /* Substitua pelo caminho da sua imagem */
-    color: #ffea00;
-    text-shadow: 0 0 10px #001D31;
-}
-
-/*End of the section*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Highlight section*/
-.highlight {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 25px;
-}
-
-.highlight_block {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.highlight_image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    width: 640px;
-    height: 360px;
-    color: #001D31;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #00BE67;
-}
-
-.highlight_description {
-    width: auto;
-    font-size: 1.8vh;
-    text-wrap: wrap;
-}
-
-.highlight_arrow {
-    display: flex;
-    align-items: center;
-    font-size: 5vh;
-    margin: 1vh;
-    transition: all 0.5s;
-}
-
-.highlight_arrow:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-/*End of the section*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Works section*/
-
-.portfolio {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/*Search bar*/
-.search_bar {
-    background-color: rgb(220, 220, 220);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 25px;
-    width: auto;
-    padding: 30px;
-    /*
-    border-radius: 0 25px 25px 0;
-    */
-}
-
-.portfolio_display {
-    margin-top: 25px;
-}
-
-.search_definitions {
-    padding: 5px;
-    font-size: 1.6vh;
-    font-family: "Kode Mono", sans-serif;
-
-    border: none;
-    border-radius: 15px;
-    padding: 5px;
-}
-
-/*
-.orderby {}
-
-.categories {}
-*/
-.SearchInput {
-    width: 60vh;
-    font-size: 2vh;
-    border: none;
-    border-radius: 15px;
-    padding: 1vh;
-}
-
-.search-button {
-    border: none;
-    border-radius: 25px;
-    background-color: #001D31;
-    color: white;
-    font-size: 2.4vh;
-    padding: 15px;
-    transition: all .3s;
-
-}
-
-.search-button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.search-button:active {
-    transform: scale(.9);
-}
-
-/*Grid display*/
-
-.portfolio_display {
-    display: flex;
-    height: 66vh;
-    justify-content: center;
-}
-
-/*
-.blogs {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    margin: 0 15px;
-    box-shadow: 0 0 10px #00BE67;
-    justify-content: center;
-    align-items: center;
-    color: #001D31;
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: "Anta", sans-serif;
-    border-radius: 25px;
-}
-*/
-.portfolio_grid {
-    padding: 30px;
-    box-shadow: 0 0 10px #00BE67;
-    width: fit-content;
-    height: auto;
-    max-height: 66vh;
-    overflow-y: auto;
-    border-radius: 25px;
-    margin: 10px;
-}
-
-
-.portfolio_grid::-webkit-scrollbar {
-    display: none;
-}
-
-/*Display portfolio grid by columns*/
-.display_columns {
-    display: grid;
-    grid-template-columns: 96vh;
-    gap: 40px;
-}
-
-.display_columns .grid_square {
-    width: auto;
-    height: 54vh;
-}
-
-.grid_square {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px #00BE67;
-    border-radius: 25px;
-    transition: all 0.3s;
-}
-
-.grid_square:hover {
-    scale: 1.05;
-    cursor: pointer;
-}
-
-/*End of the section*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
