@@ -259,7 +259,7 @@ header {
     margin: 1.5vh;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 2vh;
     justify-content: center;
     padding: 10px;
     border: none;
@@ -274,6 +274,7 @@ header {
     animation-duration: 6s;
     animation-iteration-count: infinite;
     position: relative;
+    margin-bottom: 10px;
 }
 
 @keyframes themes_button {
@@ -338,24 +339,24 @@ header {
 }
 
 .cyberPunk_button {
-    background-image: url('themeImages/theme\ \(1\).jpg');
+    background-image: url('themeImages/theme(1\).png');
     /* Substitua pelo caminho da sua imagem */
-    color: var(--Color-PINK);
-    text-shadow: 0 0 10px var(--Color-DARKER-BLUE);
+    color: #ff95e6;
+    text-shadow: 0 5px 5px #0070ba;
 }
 
 .SolarPunk_button {
-    background-image: url('themeImages/theme\ \(1\).webp');
+    background-image: url('themeImages/theme\(2\).webp');
     /* Substitua pelo caminho da sua imagem */
-    color: #aaff00;
-    text-shadow: 0 0 10px #001D31;
+    color: #eeffcc;
+    text-shadow: 0 5px 5px #236c1e;
 }
 
 .SteamPunk_button {
-    background-image: url('themeImages/theme\ \(2\).jpg');
+    background-image: url('themeImages/theme\(3\).jpg');
     /* Substitua pelo caminho da sua imagem */
-    color: #ffea00;
-    text-shadow: 0 0 10px #001D31;
+    color: #d6aa27;
+    text-shadow: 0 5px 5px #72390e;
 }
 
 /*End of the section*/
