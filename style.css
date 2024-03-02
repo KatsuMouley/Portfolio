@@ -70,7 +70,7 @@ header {
     cursor: pointer;
 }
 
-.slideButton {
+.Sidebartoggle {
     border: none;
     background-color: transparent;
     font-size: 3vh;
@@ -118,7 +118,7 @@ header {
     gap: 10px;
     /*--------------------------------*/
     position: fixed;
-    top: 7.1vh;
+    top: 6vh;
     left: 0;
     z-index: 1;
     /*--------------------------------*/
@@ -126,18 +126,13 @@ header {
     /*--------------------------------*/
     width: 40vh;
     height: 100%;
+    transition: all 0.5s ease;
+    border-radius: 25px 0;
 }
 
-.Close_Sidebar {
-    animation-name: Close;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
-
-.Open_Sidebar {
-    animation-name: Open;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+.sidebar.close {
+    top: -100%;
+    opacity: 0%;
 }
 
 .sidebar_logo {
