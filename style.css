@@ -55,45 +55,43 @@ body {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Header Section*/
 header {
+    display: flex;
+    align-items: center;
     background-color: #ffffff;
-    height: 6vh;
-    padding: 10px;
-    padding-top: 0;
+    height: 4vh;
+    padding: 5px;
     margin-bottom: 25px;
-
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.logo:hover {
-    cursor: pointer;
-}
-
-.Sidebartoggle {
-    border: none;
-    background-color: transparent;
-    font-size: 3vh;
-}
 
 .nav_bar {
     display: flex;
     flex-direction: row;
-    gap: 10vh;
-    margin: 10px;
+    gap: 50px;
     justify-content: center;
 }
+
+
 
 .nav_button {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 2.8vh;
+    font-size: 2vh;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
     transition: all 0.2s;
+}
+
+.Sidebartoggle {
+    border: none;
+    background-color: transparent;
+    font-size: 3vh;
 }
 
 .nav_button:hover {
@@ -118,14 +116,14 @@ header {
     gap: 15px;
     /*--------------------------------*/
     position: fixed;
-    top: 6vh;
+    top: 4vh;
     left: 0;
     z-index: 1;
     /*--------------------------------*/
     background-color: white;
     /*--------------------------------*/
-    width: 40vh;
-    height: 90%;
+    width: 30vh;
+    height: 75vh;
     transition: all 0.5s ease;
     border-radius: 0 0 35px 35px;
     overflow-y: auto;
@@ -144,7 +142,7 @@ header {
     display: flex;
     justify-content: center;
     align-self: center;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     background-color: var(--Color-LIGHT-GREEN);
 }
@@ -155,7 +153,8 @@ header {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     text-shadow: -10px 10px 15px var(--Color-DARKER-BLUE);
-    font-size: 5vh;
+    font-size: 20px;
+    text-wrap: nowrap;
     padding: 20px;
 
 }
@@ -213,7 +212,7 @@ header {
 .Sidebar_Button_Icon {
     width: 1fr;
     color: black;
-    font-size: 5vh;
+    font-size: 3vh;
     padding: 20px;
     transition: all .3s ease;
 }
@@ -222,7 +221,7 @@ header {
     display: flex;
     align-items: center;
     width: 3fr;
-    font-size: 28px;
+    font-size: 18px;
     color: black;
     font-family: var(--fonts1-Kode_Mono);
 }
