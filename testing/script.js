@@ -9,4 +9,3 @@ const SidebarButton = document.body.querySelector(".Sidebartoggle"),
 SidebarButton.addEventListener("click", () => {
     Sidebar.classList.toggle("close");
 });
-
