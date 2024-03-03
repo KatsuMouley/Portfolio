@@ -141,20 +141,21 @@ header {
     /*--------------------------------*/
     width: 30vh;
     height: 75vh;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
     border-radius: 0 0 35px 35px;
     overflow-y: auto;
 
-}
-
-.sidebar::-webkit-scrollbar {
-    display: none;
 }
 
 .sidebar.close {
     top: -100%;
     opacity: 0%;
 }
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
 
 .sidebar_logo {
     display: flex;
@@ -444,19 +445,25 @@ header {
 .search_definitions {
     width: 15vh;
     padding: 5px;
-    font-size: 1.2vh;
+    font-size: 1.8vh;
     font-family: "Kode Mono", sans-serif;
 
     border: none;
     border-radius: 15px;
 }
 
+.orderby,
+.categories {
+    transition: all 0.5s;
+}
+
 .SearchInput {
-    width: 16vh;
-    font-size: 1.8vh;
+    width: 32vh;
+    font-size: 2vh;
     border: none;
     border-radius: 15px;
     padding: 1vh;
+    transition: all 0.5s;
 }
 
 .search-button {
