@@ -72,9 +72,8 @@ header {
     background-color: #ffffff;
 
     height: 6vh;
-
-    padding: 5px;
-
+    padding: .5vh;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -129,29 +128,56 @@ header {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Sidebar Section*/
+
 .sidebar {
     display: flex;
     flex-direction: column;
     gap: 15px;
     /*--------------------------------*/
-    position: fixed;
-    top: 6vh;
-    left: 0;
+    position: absolute;
+    top: 8vh;
     z-index: 1;
     /*--------------------------------*/
     background-color: rgba(255, 255, 255, 0.95);
     /*--------------------------------*/
-    width: 30vh;
+    width: 40vw;
     height: 75vh;
-    transition: all 0.8s ease;
-    border-radius: 0 0 35px 35px;
+    border-radius: 35px;
     overflow-y: auto;
 
+    animation-name: wobble_sidebar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: all 1s ease-in-out;
+    animation-play-state: running;
+}
+
+@keyframes wobble_sidebar {
+    25% {
+        left: 1vw;
+        transform: rotate(-.5);
+    }
+
+    50% {
+        left: 2vw;
+        transform: rotate(.5deg);
+    }
+
+    75% {
+        left: 1vw;
+        transform: rotate(-.5deg);
+    }
+
+    100% {
+        left: 1vw;
+        transform: rotate(0);
+    }
 }
 
 .sidebar.close {
-    top: -100%;
-    opacity: 0%;
+    top: -75vh;
+    opacity: 0.0;
+    animation-play-state: paused;
 }
 
 .sidebar::-webkit-scrollbar {
