@@ -469,8 +469,8 @@ header {
 
 .search_definitions {
     width: 15vw;
-    padding: 5px;
-    font-size: 2vh;
+    font-size: 2.5vh;
+    padding: 1vh;
     font-family: "Kode Mono", sans-serif;
 
     border: none;
@@ -484,7 +484,7 @@ header {
 
 .SearchInput {
     width: 46vw;
-    font-size: 4vw;
+    font-size: 2.5vh;
     border: none;
     border-radius: 15px;
     padding: 1vh;
@@ -496,7 +496,7 @@ header {
     border-radius: 25px;
     background-color: #001D31;
     color: white;
-    font-size: 5.4vw;
+    font-size: 2.5vh;
     padding: 8px;
     transition: all .3s;
 
