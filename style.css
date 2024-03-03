@@ -134,7 +134,7 @@ header {
     flex-direction: column;
     gap: 15px;
     /*--------------------------------*/
-    position: sticky;
+    position: fixed;
     top: 6vh;
     left: 0;
     z-index: 1;
