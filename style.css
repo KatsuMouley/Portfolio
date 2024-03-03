@@ -109,6 +109,7 @@ header {
     border: none;
     background-color: transparent;
     font-size: 4vh;
+    padding: 1vh;
 }
 
 .nav_button:hover {
@@ -279,12 +280,12 @@ header {
 
 @keyframes themes_button {
     0% {
-        transform: scale(.9) rotate(10deg);
+        transform: scale(.8) rotate(10deg);
         color: #F500BD;
     }
 
     25% {
-        transform: scale(1) rotate(-5deg);
+        transform: scale(.9) rotate(-5deg);
         color: #00BE67;
     }
 
@@ -294,12 +295,12 @@ header {
     }
 
     75% {
-        transform: scale(1) rotate(-15deg);
+        transform: scale(.9) rotate(-15deg);
         color: #ffea00;
     }
 
     100% {
-        transform: scale(.9) rotate(10deg);
+        transform: scale(.8) rotate(10deg);
         color: #F500BD;
     }
 }
@@ -389,9 +390,8 @@ header {
     width: 36vh;
     height: 20vh;
     object-fit: cover;
-    object-position: 50% 30%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #00BE67;
+    object-position: 50% 33%;
+    border-radius: 10px;
 }
 
 
@@ -442,7 +442,7 @@ header {
 }
 
 .search_definitions {
-    width: 6vh;
+    width: 15vh;
     padding: 5px;
     font-size: 1.2vh;
     font-family: "Kode Mono", sans-serif;
