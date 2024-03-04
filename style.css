@@ -72,7 +72,6 @@ header {
     background-color: #ffffff;
 
     height: 6vh;
-    padding: .5vh;
     width: 100%;
     position: sticky;
     top: 0;
@@ -99,18 +98,19 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 1.7vh;
+    font-size: 3vw;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
     transition: all 0.2s;
+    padding: 2vw;
 }
 
 .Sidebartoggle {
     border: none;
     background-color: transparent;
     font-size: 4vh;
-    padding: 1vh;
+    padding: 3vh;
 }
 
 .nav_button:hover {
@@ -136,11 +136,12 @@ header {
     /*--------------------------------*/
     position: absolute;
     top: 8vh;
+    left: 1vw;
     z-index: 1;
     /*--------------------------------*/
     background-color: rgba(255, 255, 255, 0.95);
     /*--------------------------------*/
-    width: 40vw;
+    width: 50vw;
     height: 75vh;
     border-radius: 35px;
     overflow-y: auto;
@@ -154,22 +155,18 @@ header {
 
 @keyframes wobble_sidebar {
     25% {
-        left: 1vw;
-        transform: rotate(-.5);
+        transform: rotate(0);
     }
 
     50% {
-        left: 2vw;
-        transform: rotate(.5deg);
+        transform: rotate(1deg);
     }
 
     75% {
-        left: 1vw;
-        transform: rotate(-.5deg);
+        transform: rotate(-1deg);
     }
 
     100% {
-        left: 1vw;
         transform: rotate(0);
     }
 }
@@ -189,12 +186,14 @@ header {
     display: flex;
     justify-content: center;
     align-self: center;
+    padding: 15vw;
     height: 15vh;
-    width: 100%;
+    width: 100vw;
     background-color: var(--Color-LIGHT-GREEN);
 }
 
 .letter_K {
+    position: fixed;
     color: #ffffff;
     animation-name: logo_changing;
     animation-duration: 2s;
@@ -271,6 +270,14 @@ header {
     font-size: 2vh;
     color: black;
     font-family: var(--fonts1-Kode_Mono);
+}
+
+
+.sidebar_end {
+    width: 25%;
+    border-color: #000000;
+    border-width: 10px;
+    border-radius: 15px;
 }
 
 /*End of the section*/
