@@ -145,6 +145,7 @@ header {
     height: 75vh;
     border-radius: 35px;
     overflow-y: auto;
+    overflow-x: none;
 
     animation-name: wobble_sidebar;
     animation-duration: 5s;
@@ -186,8 +187,8 @@ header {
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 15vw;
-    height: 15vh;
+    padding-bottom: 10vh;
+    height: 10vh;
     width: 100vw;
     background-color: var(--Color-LIGHT-GREEN);
 }
@@ -201,8 +202,6 @@ header {
     text-shadow: -10px 10px 15px var(--Color-DARKER-BLUE);
     font-size: 3vh;
     text-wrap: nowrap;
-    padding: 20px;
-
 }
 
 
