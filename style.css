@@ -89,7 +89,7 @@ header {
 .nav_select {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -103,13 +103,13 @@ header {
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
     transition: all 0.2s;
-    padding: 10px;
+    padding: 5px;
 }
 
 .Sidebartoggle {
     border: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px;
 }
 
