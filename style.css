@@ -439,8 +439,8 @@ header {
 }
 
 .highlight_image img {
-    width: 350px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
     object-fit: cover;
     object-position: 50% 33%;
     border-radius: 10px;
@@ -501,8 +501,8 @@ border-radius: 0 25px 25px 0;
 }
 
 .search_definitions {
-    width: 100px;
-    font-size: 16px;
+    width: 50px;
+    font-size: 12px;
     padding: 8px;
     font-family: "Kode Mono", sans-serif;
 
@@ -517,7 +517,7 @@ border-radius: 0 25px 25px 0;
 
 .SearchInput {
     height: 20px;
-    width: 400px;
+    width: 300px;
     font-size: 12px;
     padding: 10px;
     border: none;
@@ -589,14 +589,14 @@ border-radius: 25px;
 /*Display portfolio grid by columns*/
 .display_columns {
     display: grid;
-    grid-template-columns: 500px;
+    grid-template-columns: 300px;
     justify-content: center;
     gap: 30px;
 }
 
 .display_columns .grid_square {
     width: auto;
-    height: 300px;
+    height: 200px;
 }
 
 .grid_square {
