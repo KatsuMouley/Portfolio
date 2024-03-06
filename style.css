@@ -103,14 +103,14 @@ header {
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
     transition: all 0.2s;
-    padding: 2vw;
+    padding: 10px;
 }
 
 .Sidebartoggle {
     border: none;
     background-color: transparent;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .nav_button:hover {
