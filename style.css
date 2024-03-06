@@ -98,7 +98,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
     font-family: var(--fonts1-Anta);
     text-wrap: nowrap;
     color: var(--Color-DARKER-BLUE);
@@ -110,7 +110,7 @@ header {
     border: none;
     background-color: transparent;
     font-size: 30px;
-    padding: 3vh;
+    padding: 20px;
 }
 
 .nav_button:hover {
@@ -141,7 +141,7 @@ header {
     /*--------------------------------*/
     background-color: rgba(255, 255, 255, 0.95);
     /*--------------------------------*/
-    width: 40vw;
+    width: 300px;
     height: 75vh;
     border-radius: 35px;
     overflow-y: auto;
@@ -188,8 +188,8 @@ header {
     justify-content: center;
     align-self: center;
     padding-bottom: 10vh;
-    height: 10vh;
-    width: 40vw;
+    height: 200px;
+    width: 300px;
     background-color: var(--Color-LIGHT-GREEN);
 }
 
@@ -439,7 +439,7 @@ header {
 }
 
 .highlight_image img {
-    width: 450px;
+    width: 350px;
     height: 200px;
     object-fit: cover;
     object-position: 50% 33%;
@@ -501,9 +501,9 @@ border-radius: 0 25px 25px 0;
 }
 
 .search_definitions {
-    width: 120px;
+    width: 100px;
     font-size: 16px;
-    padding: 10px;
+    padding: 8px;
     font-family: "Kode Mono", sans-serif;
 
     border: none;
@@ -518,7 +518,7 @@ border-radius: 0 25px 25px 0;
 .SearchInput {
     height: 20px;
     width: 400px;
-    font-size: 16px;
+    font-size: 12px;
     padding: 10px;
     border: none;
     border-radius: 15px;
@@ -530,7 +530,7 @@ border-radius: 0 25px 25px 0;
     border-radius: 25px;
     background-color: #001D31;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     padding: 8px;
     transition: all .3s;
 
@@ -624,10 +624,6 @@ border-radius: 25px;
 @media only screen and (min-width: 848px) {
     .nav_button {
         font-size: 30px;
-    }
-
-    .sidebar {
-        width: 300px;
     }
 
     .highlight_arrow {
