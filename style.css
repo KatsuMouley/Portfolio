@@ -142,7 +142,7 @@ header {
     /*--------------------------------*/
     background-color: rgba(255, 255, 255, 0.95);
     /*--------------------------------*/
-    width: 300px;
+    width: 250px;
     height: 75vh;
     border-radius: 35px;
     overflow-y: auto;
@@ -307,6 +307,7 @@ header {
     justify-content: center;
     animation-name: themes_button;
     font-size: 16px;
+    margin: 10px;
     font-family: "kode mono", sans-serif;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -361,13 +362,12 @@ header {
 
 .Theme_button {
     display: flex;
-    height: 80px;
-    width: 120px;
     border: none;
     border-radius: 30px;
 
     font-family: "Kode Mono", sans-serif;
     font-size: 16px;
+    padding: 30px 30px;
     font-weight: bolder;
 
     background-size: cover;
@@ -502,7 +502,6 @@ border-radius: 0 25px 25px 0;
 }
 
 .search_definitions {
-    width: 50px;
     font-size: 12px;
     padding: 8px;
     font-family: "Kode Mono", sans-serif;
@@ -517,8 +516,6 @@ border-radius: 0 25px 25px 0;
 }
 
 .SearchInput {
-    height: 20px;
-    width: 300px;
     font-size: 12px;
     padding: 10px;
     border: none;
@@ -534,7 +531,6 @@ border-radius: 0 25px 25px 0;
     font-size: 12px;
     padding: 8px;
     transition: all .3s;
-
 }
 
 .search-button:hover {
@@ -615,13 +611,13 @@ border-radius: 25px;
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/**/
+/*Contacts*/
 
 /*End of the section*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Responsivity*/
+/*Responsive*/
 @media only screen and (min-width: 648px) {
     .highlight_image img {
         height: 150px;
@@ -650,35 +646,18 @@ border-radius: 25px;
         max-width: 620px;
     }
 
-    .search_definitions {
-        width: 50px;
-        font-size: 12px;
-        padding: 8px;
-        font-family: "Kode Mono", sans-serif;
-
-        border: none;
-        border-radius: 15px;
+    .search-button{
+        font-size: 16px;
     }
-
-    .SearchInput {
-        height: 20px;
-        width: 300px;
-        font-size: 12px;
-        padding: 10px;
-        border: none;
-        border-radius: 15px;
-        transition: all 0.5s;
+    .SearchInput{
+        font-size: 16px;
     }
-
-    .search-button {
-        border: none;
-        border-radius: 25px;
-        background-color: #001D31;
-        color: white;
-        font-size: 12px;
-        padding: 8px;
-        transition: all .3s;
-
+    .search_definitions{
+        font-size: 16px;
+    }
+    .Theme_button{
+        font-size: 18px;
+        padding: 35px 35px;
     }
 }
 
@@ -712,6 +691,15 @@ border-radius: 25px;
     .highlight_block {
         flex-direction: row;
     }
+    .Theme_button{
+        font-size: 19px;
+        padding: 38px 38px;
+    }
+    .themes_title{
+        font-size: 18px;
+        margin: 15px;
+    }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -729,21 +717,38 @@ border-radius: 25px;
     }
 
     .highlight_image img {
-        height: 350px;
-        width: 550px;
+        height: 300px;
+        width: 475px;
     }
 
     .highlight_block {
         flex-direction: row;
     }
-
+    
+    .search-button{
+        font-size: 20px;
+    }
+    .SearchInput{
+        font-size: 20px;
+    }
+    .search_definitions{
+        font-size: 20px;
+    }
+    .Theme_button{
+        font-size: 20px;
+        padding: 40px 40px;
+    }
+    .themes_title{
+        font-size: 20px;
+        margin: 15px;
+    }
 }
 
 @media only screen and (min-width: 1250px) {
 
     .highlight_image img {
-        height: 450px;
-        width: 650px;
+        height: 300px;
+        width: 500px;
     }
 
     .highlight_description {
@@ -768,9 +773,29 @@ border-radius: 25px;
     .portfolio_grid {
         max-width: 1150px;
     }
+    .search-button{
+        font-size: 25px;
+    }
+    .SearchInput{
+        font-size: 25px;
+    }
+    .search_definitions{
+        font-size: 25px;
+    }
+    /*-------------------------------------------------------------------*/
+    
+    .Theme_button{
+        font-size: 22px;
+        padding: 45px 45px;
+    }
 }
 
 @media only screen and (min-width: 1548px) {
+    
+    .highlight_image img {
+        height: 425px;
+        width: 750px;
+    }
     .display_columns {
         grid-template-columns: 350px 350px 350px 350px;
     }
@@ -783,6 +808,15 @@ border-radius: 25px;
     /*--------------------------------------------------------------------*/
     .portfolio_grid {
         max-width: 1500px;
+    }
+    .Theme_button{
+        font-size: 30px;
+        padding: 45px 45px;
+    }
+    
+    .themes_title{
+        font-size: 25px;
+        margin: 15px;
     }
 }
 
@@ -803,11 +837,19 @@ border-radius: 25px;
 
     /*--------------------------------------------------------------------*/
     .highlight_image img {
-        height: 600px;
-        width: 750px;
+        height: 475px;
+        width: 850px;
     }
 
     .highlight_description {
         font-size: 24px;
+    }
+    .themes_title{
+        font-size: 30px;
+        margin: 15px;
+    }
+    .Theme_button{
+        font-size: 35px;
+        padding: 45px 45px;
     }
 }
