@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.backgroundWorksSpace {
+  background-image: url('./pinkTrees.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed; /* ou absolute */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.color_pink{
+  background-color: #DD8989;
+}
+
+.backgroundpattern {
+  background-image: url('./star.png');
+  background-size: 5%;
+  background-repeat: repeat;
+  animation: pan 50s linear infinite;
+  opacity: 0%;
+}
+
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+    
+    transform: rotate(0%);
+  }
+
+  100% {
+    background-position: 100% 0%;
+    transform: rotate(100%);
+  }
+}
+
+.backgroundcolor {
+  background: radial-gradient(circle, rgb(255, 220, 46), rgb(255, 210, 11) );
+}
+
+.backgroundcolor2 {
+  background: radial-gradient(circle, transparent 25%, rgb(255, 210, 11));
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.animatingElementSample1
+{
+  animation: movingElement 20s linear infinite;
+  position: absolute; /* necessário para mover na tela */
+}
+
+@keyframes movingElement {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
