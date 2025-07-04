@@ -1,4 +1,4 @@
-import "./style/globals.css";
+import "@/style/globals.css";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

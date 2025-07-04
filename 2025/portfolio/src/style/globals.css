@@ -19,7 +19,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
-
+/* 
 .backgroundWorksSpace {
   background-image: url('./pinkTrees.png');
   background-size: cover;
@@ -27,13 +27,13 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
-  position: fixed; /* ou absolute */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-}
+} */
 
-.color_pink{
+/* .color_pink{
   background-color: #DD8989;
 }
 
@@ -43,8 +43,8 @@ body {
   background-repeat: repeat;
   animation: pan 50s linear infinite;
   opacity: 0%;
-}
-
+} */
+/* 
 @keyframes pan {
   0% {
     background-position: 0% 0%;
@@ -56,9 +56,9 @@ body {
     background-position: 100% 0%;
     transform: rotate(100%);
   }
-}
+} */
 
-.backgroundcolor {
+/* .backgroundcolor {
   background: radial-gradient(circle, rgb(255, 220, 46), rgb(255, 210, 11) );
 }
 
@@ -74,7 +74,7 @@ body {
 .animatingElementSample1
 {
   animation: movingElement 20s linear infinite;
-  position: absolute; /* necessário para mover na tela */
+  position: absolute;
 }
 
 @keyframes movingElement {
@@ -85,4 +85,4 @@ body {
   100% {
     transform: translateX(100%);
   }
-}
+} */
