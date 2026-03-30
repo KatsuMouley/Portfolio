@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vitor Mougenot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* ── PALETTE: OCEAN (default) ── */
+      --sky-gradient: linear-gradient(180deg, #d6eef8 0%, #b8ddef 40%, #8ec8e2 70%, #6db4d4 100%);
+      --grid-color: rgba(100, 160, 200, 0.13);
+      --accent-green: #4ecb8d;
+      --accent-blue: #3a8fc4;
+      --card-blue: #2d6fa3;
+      --card-teal: #1a9e80;
+      --card-dark: #1e4d6b;
+      --card-light-bg: #e8f4fc;
+      --card-light-border: rgba(60,130,180,0.18);
+      --text-light: #e8f4fc;
+      --text-body: #1a3a4a;
+      --bg-main: #f0f8fc;
+      --nav-bg: rgba(200, 232, 245, 0.55);
+      --hero-name-color: #1a3a4a;
+      --hero-sub-color: #2a5a78;
+      --hero-aka-color: #3d7a9a;
+      --btn-outline-color: #1a3a4a;
+      --about-grid-color: rgba(100,160,200,0.08);
+      --see-skills-color: #3a8fc4;
+      /* wave colors */
+      --w1: #7ab8d8; --w2: #5a9ab8; --w3: #3d7a9a; --w4: #2a5f7a; --w5: #1e4d6a;
+      /* overflow wave colors */
+      --ow1: #7ab8d8; --ow2: #5a9ab8; --ow3: #3d7a9a; --ow4: #2a5f7a; --ow5: #1e4d6a;
+      --rain-rgba: 140, 200, 235;
+    }
+
+    [data-palette="dark-red"] {
+      --sky-gradient: linear-gradient(180deg, #1a0a0a 0%, #3d1010 40%, #5c1a1a 70%, #7a2020 100%);
+      --grid-color: rgba(180, 60, 60, 0.13);
+      --accent-green: #c0392b;
+      --accent-blue: #e05050;
+      --card-blue: #5c1a1a;
+      --card-teal: #7a1515;
+      --card-dark: #2d0a0a;
+      --card-light-bg: #1f0d0d;
+      --card-light-border: rgba(180,60,60,0.25);
+      --text-light: #f5d5d5;
+      --text-body: #f5d5d5;
+      --bg-main: #120606;
+      --nav-bg: rgba(40, 10, 10, 0.75);
+      --hero-name-color: #f5d5d5;
+      --hero-sub-color: #e08080;
+      --hero-aka-color: #c06060;
+      --btn-outline-color: #f5d5d5;
+      --about-grid-color: rgba(180,60,60,0.08);
+      --see-skills-color: #e05050;
+      --w1: #7a2020; --w2: #5c1515; --w3: #8b2020; --w4: #3d0a0a; --w5: #1a0505;
+      --ow1: #7a2020; --ow2: #5c1515; --ow3: #8b2020; --ow4: #3d0a0a; --ow5: #1a0505;
+      --rain-rgba: 180, 80, 80;
+    }
+
+    [data-palette="bw"] {
+      --sky-gradient: linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 40%, #888 70%, #444 100%);
+      --grid-color: rgba(0, 0, 0, 0.08);
+      --accent-green: #222;
+      --accent-blue: #555;
+      --card-blue: #3a3a3a;
+      --card-teal: #555;
+      --card-dark: #111;
+      --card-light-bg: #f0f0f0;
+      --card-light-border: rgba(0,0,0,0.15);
+      --text-light: #f0f0f0;
+      --text-body: #111;
+      --bg-main: #f5f5f5;
+      --nav-bg: rgba(220, 220, 220, 0.75);
+      --hero-name-color: #111;
+      --hero-sub-color: #333;
+      --hero-aka-color: #666;
+      --btn-outline-color: #111;
+      --about-grid-color: rgba(0,0,0,0.06);
+      --see-skills-color: #333;
+      --w1: #999; --w2: #777; --w3: #555; --w4: #333; --w5: #111;
+      --ow1: #999; --ow2: #777; --ow3: #555; --ow4: #333; --ow5: #111;
+      --rain-rgba: 100, 100, 100;
+    }
+
+    [data-palette="fire"] {
+      --sky-gradient: linear-gradient(180deg, #1a1a1a 0%, #2d1500 40%, #4d1f00 70%, #6b2800 100%);
+      --grid-color: rgba(255, 180, 0, 0.10);
+      --accent-green: #f5a623;
+      --accent-blue: #e53935;
+      --card-blue: #8b2500;
+      --card-teal: #b03000;
+      --card-dark: #1a0a00;
+      --card-light-bg: #1a0a00;
+      --card-light-border: rgba(245,166,35,0.25);
+      --text-light: #fff3e0;
+      --text-body: #fff3e0;
+      --bg-main: #0d0500;
+      --nav-bg: rgba(20, 8, 0, 0.80);
+      --hero-name-color: #ffe082;
+      --hero-sub-color: #ffb74d;
+      --hero-aka-color: #e53935;
+      --btn-outline-color: #ffe082;
+      --about-grid-color: rgba(255,180,0,0.07);
+      --see-skills-color: #f5a623;
+      --w1: #b03000; --w2: #8b2500; --w3: #6b1a00; --w4: #4d1000; --w5: #2d0800;
+      --ow1: #b03000; --ow2: #8b2500; --ow3: #6b1a00; --ow4: #4d1000; --ow5: #2d0800;
+      --rain-rgba: 255, 160, 30;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-body);
+      overflow-x: hidden;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem 2rem;
+      background: var(--nav-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      transition: background 0.5s;
+    }
+    nav a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text-body);
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent-blue); }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+    }
+
+    .sky {
+      position: absolute;
+      inset: 0;
+      background: var(--sky-gradient);
+      transition: background 0.5s;
+    }
+
+    #rainCanvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 7rem 4rem 2rem;
+      z-index: 10;
+    }
+
+    .hero-name {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      color: var(--hero-name-color);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      animation: fadeDown 0.8s ease both;
+      transition: color 0.5s;
+    }
+
+    .hero-title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.4rem;
+      animation: fadeDown 0.9s ease both;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      font-weight: 400;
+      color: var(--hero-sub-color);
+      transition: color 0.5s;
+    }
+
+    .hero-aka {
+      font-size: 0.85rem;
+      color: var(--hero-aka-color);
+      font-style: italic;
+      transition: color 0.5s;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.8rem;
+      animation: fadeDown 1s ease both;
+    }
+
+    .btn {
+      padding: 0.55rem 1.6rem;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.5s, color 0.5s, border-color 0.5s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+    .btn-green { background: var(--accent-green); color: #fff; }
+    .btn-outline {
+      background: transparent;
+      color: var(--btn-outline-color);
+      border: 1.5px solid var(--btn-outline-color);
+    }
+
+    /* ── COLOR SWITCHER ── */
+    #colorBtn {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 20;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--hero-name-color);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    #colorBtn:hover { background: rgba(255,255,255,0.25); transform: translateY(-1px); }
+    #colorBtn .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      transition: background 0.5s;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTIONS BASE ── */
+    .content-section {
+      position: relative;
+      padding: 5rem 4rem;
+      background: var(--bg-main);
+      overflow: hidden;
+      transition: background 0.5s;
+    }
+    
+    .content-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--about-grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--about-grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .section-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: var(--hero-name-color);
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      position: relative;
+      transition: color 0.5s;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 1.2rem;
+      max-width: 860px;
+      position: relative;
+    }
+    .about-grid-main {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+    }
+    .about-grid-3cols {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* cards */
+    .about-card {
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease both;
+      transition: background 0.5s, color 0.5s, border-color 0.5s;
+    }
+
+    .about-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+
+    .about-card p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .card-approach { background: var(--card-blue); color: var(--text-light); }
+    .card-approach h3 { color: var(--text-light); opacity: 0.7; }
+    
+    .card-philosophy { background: var(--card-dark); color: var(--text-light); }
+    .card-philosophy h3 { color: var(--text-light); opacity: 0.7; }
+    
+    .card-expertise {
+      background: var(--card-light-bg);
+      color: var(--text-body);
+      border: 1.5px solid var(--card-light-border);
+    }
+    .card-expertise h3 { color: var(--accent-blue); }
+
+    .card-photo {
+      background: var(--card-teal);
+      grid-column: 2;
+      grid-row: 1 / 3;
+      width: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 0;
+      transition: background 0.5s;
+    }
+
+    .card-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .see-skills {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--see-skills-color);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.5s;
+    }
+    .see-skills:hover { border-color: var(--see-skills-color); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 680px) {
+      .hero-content { padding: 6rem 1.5rem 2rem; }
+      .content-section { padding: 3rem 1.5rem 4rem; }
+      .about-grid-main { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .card-photo { grid-column: 1; width: 100%; min-height: 180px; }
+      .card-expertise { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="hero">
+  <div class="sky"></div>
+  <canvas id="mountainCanvas" style="position:absolute;bottom:0;left:0;width:100%;pointer-events:none;z-index:1;"></canvas>
+  <canvas id="rainCanvas"></canvas>
+  <div class="grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-name">VITOR MOUGENOT</div>
+    <div class="hero-title-row">
+      <span class="hero-subtitle">Software Engineer &amp; 3D Artist</span>
+      <span class="hero-aka">a.k.a Katsu Mouley</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-green">Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </div>
+  </div>
+
+  <button id="colorBtn">
+    <span class="dot"></span>
+    Colors
+  </button>
+</section>
+
+<section id="about" class="content-section">
+  <canvas id="overflowCanvas" style="position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:1;"></canvas>
+  <h2 class="section-heading">ABOUT ME</h2>
+  <div class="about-grid about-grid-main">
+    <div class="about-card card-approach" style="animation-delay: 0.1s;">
+      <h3>My Approach</h3>
+      <p>I am a Software Engineering student at Universidade Positivo, focused on delivering end-to-end solutions. With advanced English proficiency, I work on international projects that combine technical rigor with a strong creative perspective.</p>
+    </div>
+
+    <div class="about-card card-photo" style="animation-delay: 0.2s;">
+      <img src="me.png" alt="Vitor Mougenot" />
+    </div>
+
+    <div class="about-card card-philosophy" style="animation-delay: 0.25s;">
+      <h3>Code Philosophy</h3>
+      <p>I build applications based on clean code, solid UI/UX principles, and scalable architecture.</p>
+    </div>
+
+    <div class="about-card card-expertise" style="animation-delay: 0.35s; grid-column: 1 / 3;">
+      <h3>Technical Expertise</h3>
+      <p>I combine structured logic and robust system development (Java, C++, and the JavaScript ecosystem) with a strong foundation in Computer Graphics and 3D Modeling.</p>
+      <a href="#skills" class="see-skills">See Skills →</a>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="content-section">
+  <h2 class="section-heading">SKILLS</h2>
+  <div class="about-grid about-grid-3cols">
+    <div class="about-card card-expertise">
+      <h3>Web Development</h3>
+      <p>Next.js, Tailwind CSS, GSAP, HTML/CSS, and modern JavaScript ecosystem for building fast and interactive UIs.</p>
+    </div>
+    <div class="about-card card-philosophy">
+      <h3>3D & Graphics</h3>
+      <p>Blender 3D, OpenGL, Vulkan. Specialized in creating low-poly assets, character models, and complex animations.</p>
+    </div>
+    <div class="about-card card-approach">
+      <h3>Systems & Software</h3>
+      <p>C++, Java, ESP32 for IoT systems, and theoretical foundations in DevOps lifecycle and algorithmic logic.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="content-section">
+  <h2 class="section-heading">PROJECTS</h2>
+  <div class="about-grid about-grid-3cols">
+    <div class="about-card card-approach">
+      <h3>IoT Real-Time Monitor</h3>
+      <p>An integrated hardware/software system utilizing C++ and ESP32 for real-time data monitoring and transmission.</p>
+    </div>
+    <div class="about-card card-expertise">
+      <h3>Game E-Commerce</h3>
+      <p>A full-stack development practice project building a complete digital storefront for video games.</p>
+    </div>
+    <div class="about-card card-philosophy">
+      <h3>3D Art Commissions</h3>
+      <p>Freelance 3D modeling creating custom, highly optimized low-poly characters and environmental assets.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="content-section" style="padding-bottom: 8rem;">
+  <div style="max-width: 600px;">
+    <h2 class="section-heading">LET'S CONNECT</h2>
+    <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
+      Whether you have a question about web development, 3D modeling, or want to discuss a new project, my inbox is open.
+    </p>
+    <a href="mailto:contato@exemplo.com" class="btn btn-green" style="font-size: 1rem; padding: 0.8rem 2rem;">Send me an email</a>
+  </div>
+</section>
+
+<script>
+  const heroEl = document.getElementById('hero');
+
+  // ── PALETTE SWITCHER ──
+  const palettes = ['ocean', 'dark-red', 'bw', 'fire'];
+  let currentPalette = 0;
+
+  function getCSSVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  document.getElementById('colorBtn').addEventListener('click', () => {
+    currentPalette = (currentPalette + 1) % palettes.length;
+    const p = palettes[currentPalette];
+    document.documentElement.setAttribute('data-palette', p === 'ocean' ? '' : p);
+  });
+
+  // ── WAVE / SEA CANVAS ──
+  const mtnCanvas = document.getElementById('mountainCanvas');
+  const mctx = mtnCanvas.getContext('2d');
+
+  function resizeMtn() {
+    mtnCanvas.width  = heroEl.offsetWidth;
+    mtnCanvas.height = heroEl.offsetHeight;
+  }
+  resizeMtn();
+
+  const waveLayers = [
+    { baseY: 0.58, varName: '--w1', alpha: 0.45, freq: 0.0018, amp: 28, speed: 0.00045, phase: 0   },
+    { baseY: 0.68, varName: '--w2', alpha: 0.65, freq: 0.0022, amp: 22, speed: 0.00038, phase: 1.8 },
+    { baseY: 0.77, varName: '--w3', alpha: 0.85, freq: 0.0028, amp: 16, speed: 0.00055, phase: 3.4 },
+    { baseY: 0.87, varName: '--w4', alpha: 1.0,  freq: 0.0035, amp: 10, speed: 0.00042, phase: 0.9 },
+    { baseY: 0.95, varName: '--w5', alpha: 1.0,  freq: 0.0045, amp:  6, speed: 0.00060, phase: 2.2 },
+  ];
+
+  function drawWaves(ts) {
+    const W = mtnCanvas.width, H = mtnCanvas.height;
+    mctx.clearRect(0, 0, W, H);
+
+    waveLayers.forEach(l => {
+      mctx.beginPath();
+      mctx.moveTo(0, H);
+      const y0 = l.baseY * H + Math.sin(ts * l.speed + l.phase) * l.amp;
+      mctx.lineTo(0, y0);
+
+      const steps = 200;
+      for (let i = 1; i <= steps; i++) {
+        const x = (i / steps) * W;
+        const y = l.baseY * H
+                + Math.sin(x * l.freq + ts * l.speed + l.phase) * l.amp
+                + Math.sin(x * l.freq * 1.7 + ts * l.speed * 0.8 + l.phase + 1.2) * (l.amp * 0.4);
+        mctx.lineTo(x, y);
+      }
+
+      mctx.lineTo(W, H);
+      mctx.closePath();
+      mctx.globalAlpha = l.alpha;
+      mctx.fillStyle = getCSSVar(l.varName);
+      mctx.fill();
+      mctx.globalAlpha = 1;
+    });
+  }
+
+  // ── RAIN ──
+  const rainCanvas = document.getElementById('rainCanvas');
+  const rctx = rainCanvas.getContext('2d');
+
+  function resizeRain() {
+    rainCanvas.width  = heroEl.offsetWidth;
+    rainCanvas.height = heroEl.offsetHeight;
+  }
+  resizeRain();
+
+  const DROPS = 160;
+  const drops = Array.from({ length: DROPS }, () => ({
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    len: 12 + Math.random() * 22,
+    speed: 4 + Math.random() * 6,
+    opacity: 0.25 + Math.random() * 0.45,
+    width: 0.8 + Math.random() * 0.8,
+  }));
+
+  function drawRain() {
+    const rainRgb = getCSSVar('--rain-rgba') || '140, 200, 235';
+    rctx.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
+    drops.forEach(d => {
+      rctx.beginPath();
+      rctx.moveTo(d.x, d.y);
+      rctx.lineTo(d.x - d.len * 0.15, d.y + d.len);
+      rctx.strokeStyle = `rgba(${rainRgb}, ${d.opacity})`;
+      rctx.lineWidth = d.width;
+      rctx.lineCap = 'round';
+      rctx.stroke();
+      d.y += d.speed;
+      if (d.y - d.len > rainCanvas.height) {
+        d.y = -d.len;
+        d.x = Math.random() * rainCanvas.width;
+      }
+    });
+  }
+
+  // ── OVERFLOW WAVES ──
+  const overflowCanvas = document.getElementById('overflowCanvas');
+  const octx = overflowCanvas.getContext('2d');
+  const aboutEl = document.getElementById('about');
+
+  function resizeOverflow() {
+    overflowCanvas.width  = aboutEl.offsetWidth;
+    overflowCanvas.height = 200;
+  }
+  resizeOverflow();
+
+  const overflowLayers = [
+    { varName: '--ow1', alpha: 0.30, freq: 0.0018, amp: 22, speed: 0.00045, phase: 0,   baseY: -10 },
+    { varName: '--ow2', alpha: 0.45, freq: 0.0022, amp: 16, speed: 0.00038, phase: 1.8, baseY:  8  },
+    { varName: '--ow3', alpha: 0.55, freq: 0.0028, amp: 11, speed: 0.00055, phase: 3.4, baseY: 22  },
+    { varName: '--ow4', alpha: 0.65, freq: 0.0035, amp:  7, speed: 0.00042, phase: 0.9, baseY: 34  },
+    { varName: '--ow5', alpha: 0.80, freq: 0.0045, amp:  4, speed: 0.00060, phase: 2.2, baseY: 44  },
+  ];
+
+  function drawOverflow(ts) {
+    const W = overflowCanvas.width, H = overflowCanvas.height;
+    octx.clearRect(0, 0, W, H);
+
+    overflowLayers.forEach(l => {
+      octx.beginPath();
+      octx.moveTo(0, 0);
+
+      for (let i = 0; i <= W; i += 3) {
+        const y = l.baseY
+          + Math.sin(i * l.freq + ts * l.speed + l.phase) * l.amp
+          + Math.sin(i * l.freq * 1.7 + ts * l.speed * 0.8 + l.phase + 1.2) * (l.amp * 0.4);
+        octx.lineTo(i, y);
+      }
+
+      octx.lineTo(W, 0);
+      octx.closePath();
+
+      const color = getCSSVar(l.varName);
+      const grad = octx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0,    hexToRgba(color, l.alpha));
+      grad.addColorStop(0.55, hexToRgba(color, l.alpha * 0.3));
+      grad.addColorStop(1,    hexToRgba(color, 0));
+
+      octx.fillStyle = grad;
+      octx.fill();
+    });
+  }
+
+  // Correção da função hexToRgba para suportar códigos hex de 3 dígitos (ex: #999)
+  function hexToRgba(hex, a) {
+    let cleanHex = hex.replace('#', '').trim();
+    if (cleanHex.length === 3) {
+      cleanHex = cleanHex.split('').map(c => c + c).join('');
+    }
+    const r = parseInt(cleanHex.substring(0,2), 16);
+    const g = parseInt(cleanHex.substring(2,4), 16);
+    const b = parseInt(cleanHex.substring(4,6), 16);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+
+  // ── MAIN LOOP ──
+  function loop(ts) {
+    drawWaves(ts);
+    drawRain();
+    drawOverflow(ts);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  window.addEventListener('resize', () => {
+    resizeMtn(); resizeRain(); resizeOverflow();
+  });
+
+  // ── INTERSECTION OBSERVER ──
+  const cards = document.querySelectorAll('.about-card');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animationPlayState = 'running';
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(c => {
+    c.style.animationPlayState = 'paused';
+    obs.observe(c);
+  });
+</script>
+</body>
+</html>
